@@ -1,0 +1,48 @@
+{% extends "index.html" %}<!---->
+{% block main %}<!---->
+
+{% for asset in page.assets %}<!---->
+{% if asset is ending_with("data.toml") %}<!---->
+{% set_global data = load_data(path=asset, format="toml") %}<!---->
+{% endif %}<!---->
+{% endfor %}<!---->
+
+<h1 class="mb-16">{{ page.title }}</h1>
+{% for project in data.project %}
+<div class="not-prose block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="my-2 text-xl font-bold text-black dark:text-white">{{ project.name }}</h2>
+  <p>{{ project.desc }}</p>
+  {% if project.features is defined %}
+    <h3 class="mt-3 mb-1 mx-1 text-lg font-bold text-black dark:text-white">Features:</h3>
+    <ul class="space-y-2 text-left">
+      {% for feature in project.features %}
+        <li class="pl-4 flex items-start space-x-3 rtl:space-x-reverse">
+          <svg class="flex-shrink-0 mt-2 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+          </svg>
+          <p>{{ feature }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div class="my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      {% for tag in project.tags %}
+      <span>#{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      {% for link in project.links %}
+      <a
+        class="underline"
+        href="{{ link.url | replace(from=`$BASE_URL`, to=config.base_url) | safe  }}"
+        rel="noopener"
+        target="_blank"
+        >{{ link.name }}</a
+      >
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}<!---->
+{% endblock main %}

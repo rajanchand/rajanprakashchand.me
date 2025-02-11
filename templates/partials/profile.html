@@ -1,0 +1,61 @@
+{% if config.extra.profile.avatar_url or config.extra.profile.name %}
+<div id="particles-js" class="mb-16 flex flex-col justify-center items-center ">
+  {% if config.extra.profile.avatar_url %}
+  <div
+    class="not-prose shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]"
+  >
+    <img
+      class="{% if config.extra.profile.avatar_invert %}dark:invert{% endif %} my-0 aspect-square w-28 md:w-40 lg:w-60 rounded-full !bg-black/5"
+      src="{{ config.extra.profile.avatar_url}}"
+      alt="{{ config.extra.profile.name | default(value=config.title) }}"
+    />
+  </div>
+  {% endif %}<!---->
+
+  {% if config.extra.profile.name %}
+  <div class="flex flex-col items-center">
+    <h1 class="mb-2 text-3xl md:text-6xl lg:text-6xl font-bold text-center">{{ config.extra.profile.name }}</h1>
+    <div class="mb-2 break-words text-center">
+      {{ config.extra.profile.bio | default(value=`A blog by ` ~ config.extra.profile.name) }}
+    </div>
+
+    {% if config.extra.profile.social %}
+    <nav class="flex justify-start space-x-3 dark:invert">
+      {% for social in config.extra.profile.social %}
+      <div class="flex group">
+        <a
+          class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+          style="--url: url({{ macros::get_social_icon(icon=social.name) }})"
+          href="{{ social.url | replace(from=`$BASE_URL`, to=config.base_url) | safe  }}"
+          target="_blank"
+          rel="{% if social.name == `rss` %}alternate{% else %}me{% endif %}"
+        >
+          {{ social.name }}
+        </a>
+        <span class="absolute left-1/2 bottom-full mb-2 transform -translate-x-1/2 whitespace-nowrap bg-gray-800 text-white text-xs font-medium px-2 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          {% if social.name == 'readdotcv' %}
+            Resume
+          {% else %}
+            {{ social.name | capitalize }}
+          {% endif %}
+        </span>
+      </div>
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+  {% endif %}
+  <a 
+    href="#journey"
+    class="primary-link dark:invert mt-4 animate-bounce"
+    aria-label="Skip to skills section"
+  >
+    <img 
+      src="{{ macros::get_social_icon(icon='archlinux') }}" 
+      alt="Arch Linux Icon" 
+      class="h-8 w-8 rotate-180"
+      aria-hidden="true"
+    >
+  </a>
+</div>
+{% endif %}

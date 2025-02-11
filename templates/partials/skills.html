@@ -1,0 +1,16 @@
+{% if config.extra.profile.skills %}
+<h2 class="font-bold">Skills</h2>
+<div class="container flex flex-wrap gap-2 p-2 items-center justify-center">
+  {% for skill in config.extra.profile.skills %}
+  <div class="flex items-center justify-center dark:bg-white/[15%] block-bg rounded-lg gap-2 p-2">
+    <img
+      src="{{ macros::get_social_icon(icon=skill) }}"
+      alt="{{ skill }}"
+      class="w-8 h-8 md:w-12 md:h-12 lg:w-12 dark:invert my-0"
+      aria-label="hidden"
+    />
+    <span class="font-bold">{{ skill | capitalize }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

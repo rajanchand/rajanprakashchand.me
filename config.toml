@@ -1,0 +1,83 @@
+base_url = "https://bhuwanpandit.me"
+
+title = "Bhuwan Pandit"
+description = "Full stack developer uncovering abstractions to understand the tech underneath and deliver secure, innovative software solutions."
+author = "Bhuwan Pandit"
+default_language = "en"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+taxonomies = [{ name = "tags", rss = true, paginate_by = 5 }]
+
+compile_sass = false
+
+build_search_index = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+[extra]
+math = true
+mermaid = false
+comment = true
+social_image = "icons/github.svg"
+
+[extra.profile]
+name = "Bhuwan Pandit"
+username = "bp7968h"
+bio = "Full stack developer uncovering abstractions to understand the tech underneath."
+avatar_url = "https://avatars.githubusercontent.com/u/126598388"
+avatar_invert = false
+skills = ["html5", "css3", "tailwindcss", "javascript", "react", "nodedotjs", "express", "java", "springboot","rust","actix", "python", "flask", "mysql", "postgresql", "mongodb", "docker", "nginx", "linux", "git", "github" ,"githubactions", "gitlab"]
+social = [
+    { name = "github", url = "https://github.com/bp7968h" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/bhuwan-pandit-889807193/" },
+    { name = "rss", url = "$BASE_URL/rss.xml" },
+    { name = "readdotcv", url = "https://drive.google.com/file/d/1v5_CHJ8Dix1Q169y9NndFz7_bveO0NOg/view?usp=sharing" }
+]
+journey = [
+    { date = "April 2024 - Present", title = "Chichester District Council", address = "Chichester, United Kindom", sub_title = "ICT Development Officer", description = "Building dynamic e-forms and automated processes using HTML, CSS, and JavaScript, ensuring GDPR compliance. Managing CMS, documenting systems, supporting web services, and enhancing accessibility (WCAG 2.1) while optimizing workflows.", part = "Work", image_url = "images/cdc.png" },
+    { date = "May 2023 - May 2024",title = "University of Greenwich", address = "Greenwich, United Kindom", sub_title = "Junior Software Developer", description = "Conducted research for the EUNOMIA project, deploying the instance from scratch. Led Yak software development using Mongodb, Expressjs, React and Node.js. Designed tests, implemented CI/CD pipelines, and authored documentation.", part = "Work", image_url = "images/uog.png" },
+    { date = "Jan 2023 - Jan 2024",title = "University of Greenwich", address = "Greenwich, United Kindom", sub_title = "MSc Computing and Information Systems (Merit)", description = "Developed advanced skills in system design, software quality management, IT security, and project management. Gained hands-on experience in developing secure information systems and strategic IT planning. Accredited by BCS for partial fulfillment towards Chartered IT Professional status.", part = "Study", image_url = "images/uog.png" },
+    { date = "Jan 2023", title = "Embracing New Horizons", address = "United Kingdom", sub_title = "Moved to the UK", description = "Relocated to the UK to pursue higher education and explore new opportunities.", part = "Life", image_url = "images/uk.png" },
+    { date = "March 2021 - Jan 2023", title = "Worldlink Communications Ltd", address = "Kathmandu, Nepal", sub_title = "Assistant System Administrator", description = "Managed and optimized infrastructure for a leading ISP, improving uptime and service reliability for over 500,000 users. Automated data retrieval for security using Python and ELK stack, managed IP telephony across 75 branches, and implemented network monitoring for proactive performance and security management. Provisioned servers, optimized secure data storage, and led CI/CD automation with GitLab, Docker, and Ansible.", part = "Work", image_url = "images/wlink.png" },
+    {date = "Jul 2020 - Jul 2021",title = "Narmada Infosys",address = "Kanchanpur, Nepal",sub_title = "Network Administrator (Freelance)",description = "Installed and configured computer networks and systems, identifying and solving issues remotely. Consulted with clients to determine system requirements and design solutions, while budgeting for equipment costs. Maintained and upgraded outdated software and hardware, monitored network performance for improvements, collaborated with IT support, and provided network administration and support remotely.",part = "Work",image_url = "images/narmada.png" },
+    { date = "Sept 2020 - Sept 2023",title = "University of Wolverhampton",address = "Kathmandu, Nepal",sub_title = "BSc Computer Science",description = "Studied advanced computing concepts, focusing on High Performance Computing, Artificial Intelligence, Machine Learning, Big Data, and Cloud Systems. Developed skills in programming, problem-solving, and software development with hands-on projects. The course emphasized AI-driven technologies and collaborative development, ensuring a future-proof skillset aligned with industry demands. Accredited by Tribhuvan University and BCS Chartered Institute of IT.",part = "Study",image_url = "images/wolver.png" },
+    { date = "February 2020 - February 2021", title = "Worldlink Communications Ltd", address = "Kathmandu, Nepal", sub_title = "Enterprise Support Engineer", description = "Managed 24/7 monitoring and maintenance of complex network systems, ensuring service continuity through proactive monitoring, remote and on-site troubleshooting, and outage management. Supported enterprise clients by handling tickets, coordinating with teams for quick resolutions, and assisting with after-hours and emergency responses.", part = "Work", image_url = "images/wlink.png" },
+    { date = "July 2019 - December 2019", title = "Worldlink Communications Ltd", address = "Kathmandu, Nepal", sub_title = "Information Technology Support Representative", description = "Provided technical support via inbound customer service calls, skillfully diagnosing and resolving Internet connectivity, hardware, and software issues. Coordinated responses to service requests, facilitated communication across departments, and prepared detailed reports. Conducted follow-ups, including scheduled callbacks and field visits for hands-on problem resolution.", part = "Work", image_url = "images/wlink.png" }
+]
+
+[[extra.menu]]
+name = "Home"
+url = "$BASE_URL"
+
+[[extra.menu]]
+name = "Projects"
+url = "$BASE_URL/projects"
+
+[[extra.menu]]
+name = "Blogs"
+url = "$BASE_URL/blogs"
+
+[[extra.menu]]
+name = "Archives"
+url = "$BASE_URL/archives"
+
+[extra.footer]
+since = 2024
+license = "bp7968h"
+license_url = "https://bhuwanpandit.me"
+
+[extra.giscus]
+repo = "bp7968h/bp7968h.github.io"
+repo_id = "R_kgDOLTnpRw"
+category = "Post Comments"
+category_id = "DIC_kwDOLTnpR84CjwXr"
+mapping = "pathname"
+strict = 1
+reactions_enabled = 1
+emit_metadata = 0
+input_position = "top"
+theme = "dark"
+lang = "en"
+loading = "lazy"

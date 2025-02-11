@@ -1,0 +1,12 @@
+{% extends "index.html" %}<!---->
+{% block main %}<!---->
+
+<div class="mb-12">
+    <h1 class="mb-4">{{ page.title }}</h1>
+    <div class="mb-2 break-words">
+        <p>My personal notebook for <strong>coding</strong>, <strong>learning</strong>, and <strong>technical exploration</strong>. Sharing what I discover so you can learn too.</p>
+    </div>
+</div>
+{% set section = get_section(path=page.extra.section) %}<!---->
+{% include "partials/page_list.html" %}
+{% endblock main %}

@@ -1,0 +1,163 @@
+[[project]]
+name = "Lox-Editor - A Browser-based Code Editor for Lox"
+desc = "A React and TypeScript-powered browser-based code editor for the Lox programming language. It integrates with the Lox VM (written in Rust and compiled to WASM) to allow users to write, execute, and view output within a seamless web-based environment."
+features = [
+    "Built using React and TypeScript for a modern, interactive UI.",
+    "Integrates with the Lox VM (compiled to WebAssembly) for real-time code execution.",
+    "Supports syntax highlighting (non-realtime), keyboard navigation, and code execution.",
+    "Provides an output panel to display the results of executed Lox code.",
+    "Planned features include real-time highlighting, better error messages, and function/class support."
+]
+tags = ["React", "TypeScript", "WebAssembly", "Frontend Development"]
+links = [
+    { name = "live", url = "https://lox-editor.bhuwanpandit.me" },
+    { name = "github", url = "https://github.com/bp7968h/lox-editor" }
+]
+
+[[project]]
+name = "Lox Language - A Bytecode VM in Rust (Ongoing)"
+desc = "An implementation of the Lox programming language using Rust, featuring a Bytecode Virtual Machine (VM) compiled to WebAssembly (WASM). This project allows for fast execution of Lox code, supporting variables, loops, conditions, and logical operators. Inspired by Robert Nystrom's 'Crafting Interpreters'."
+features = [
+    "Implements a Bytecode Virtual Machine (VM) for Lox, compiled to WebAssembly (WASM).",
+    "Supports execution of variables, conditions, loops, and logical operators.",
+    "Uses Rust's memory safety and performance benefits for efficient execution.",
+    "Exposes `tokenize` (for syntax highlighting) and `compile_and_run` (for execution) functions.",
+    "Designed as a lightweight and embeddable VM for running Lox code in the browser."
+]
+tags = ["Rust", "WebAssembly", "Lox Language", "Virtual Machine", "Compilers"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/lox-rc" },
+    { name = "docs", url = "https://github.com/bp7968h/lox-rc#readme" }
+]
+
+[[project]]
+name = "Rusty Socket - WebSocket Implementation"
+desc = "Rusty Socket is a project focused on learning and implementing the WebSocket protocol (RFC 6455) from scratch using Rust. It includes a full-duplex communication channel over a single TCP connection, allowing both server and client communication. The project covers everything from establishing connections to handling WebSocket frames, opcodes, and message exchanges."
+features = [
+    "Implements the WebSocket protocol, handling handshakes, frames, and error management.",
+    "Includes a server that accepts multiple client connections and broadcasts messages to all connected clients.",
+    "Provides a simple client that can connect to the WebSocket server to send and receive real-time messages.",
+    "Modular code structure with separate libraries for core protocol logic, client-side, and server-side functionalities.",
+    "Supports various WebSocket opcodes, such as text, binary, ping, pong, and close messages.",
+    "Clear error messages to help with debugging during communication."
+]
+tags = ["Rust", "WebSocket", "Networking", "Server-Client", "Systems Programming"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/rusty_socket" },
+    { name = "docs", url = "https://github.com/bp7968h/rusty_socket#readme" }
+]
+
+[[project]]
+name = "Neplat - Nepali-English Interpreted Programming Language"
+desc = "Neplat is an interpreted programming language that allows coding using a mix of English and Nepali-transliterated keywords. This innovative approach makes coding more intuitive and accessible for native Nepali speakers, enabling them to use familiar language constructs while still being able to switch seamlessly to English when needed. It supports key programming features like variables, conditionals, loops, functions, and more."
+features = [
+    "Neplat allows you to write code using both English and Nepali-transliterated keywords, making it easier for Nepali speakers to code.",
+    "You can mix English and Nepali keywords in the same program, providing flexibility and ease of transition between languages.",
+    "The language supports essential programming concepts like declaring variables, using conditionals (if/else), and creating loops (for/while).",
+    "Functions can be defined in either English or Nepali, letting you choose the most comfortable syntax.",
+    "Neplat handles errors gracefully, giving clear messages if something goes wrong in your code.",
+    "Operators like addition, subtraction, and logical comparisons can be written in either English or Nepali, making coding more intuitive."
+]
+tags = ["Rust", "Interpreted Language", "Programming Language Design", "Cli"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/neplat" },
+    { name = "docs", url = "https://github.com/bp7968h/neplat#readme" }
+]
+
+[[project]]
+name = "EmoVoiceConnect"
+desc = "EmoVoiceConnect is a matchmaking platform that uses AI-driven emotion detection to connect users based on emotional compatibility. It analyzes voice recordings to detect core emotions (happiness, sadness, calmness, and anger) and uses these insights to match individuals, fostering deeper and more meaningful connections. The platform was developed using the MERN stack and integrates machine learning for real-time emotion analysis."
+features = [
+    "AI-based emotion detection to analyze voice recordings for matchmaking",
+    "MERN stack (MongoDB, Express, React, Node.js) used for scalable web development",
+    "Real-time chat feature for matched users to communicate",
+    "Secure user authentication and data management with MongoDB",
+    "Intuitive frontend design using React and Material UI",
+    "Voice recording and emotion analysis integrated with a Python-based microservice"
+]
+tags = ["Machine Learning", "Mongodb", "ExpressJs", "Reactjs", "Nodejs" ]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/EmoVoiceConnect" },
+    { name = "docs", url = "https://github.com/bp7968h/EmoVoiceConnect#readme" }
+]
+
+[[project]]
+name = "Toy Operating System in Rust"
+desc = "This project is an educational operating system built from scratch using Rust. Inspired by Philipp Oppermann's blog series, the goal is to understand how operating systems work at a low level while exploring Rust's capabilities, especially its 'unsafe' features. The project includes everything needed to boot and run a simple OS on an emulator."
+features = [
+    "Runs without Rust's standard library, making it lightweight and efficient",
+    "Displays text directly on the screen using VGA text mode",
+    "Includes a simple kernel that serves as a starting point for future development",
+    "Can be built to run directly on hardware using cross-compilation",
+    "Uses a bootloader to create a bootable binary file that can run on an emulator"
+]
+tags = ["Rust", "Operating System", "Low-Level Programming", "Kernel", "x86"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/ToyOperatingSys" },
+    { name = "docs", url = "https://github.com/bp7968h/ToyOperatingSys#readme" }
+]
+
+[[project]]
+name = "Rust JSON Parser (r-jparser)"
+desc = "r-jparser is a simple JSON parser built in Rust to explore parsing techniques, particularly focusing on lexical and syntactic analysis. The project is designed to break down the parsing process into two distinct stages: lexical analysis (tokenization) and syntactic analysis (matching tokens to a formal grammar). This project serves as a hands-on approach to understanding fundamental parsing concepts in Rust."
+features = [
+    "Command-line Interface (CLI) for parsing JSON files",
+    "Detailed error reporting to pinpoint the exact location of parsing issues",
+    "Modular design to isolate components for maintainability and scalability"
+]
+tags = ["Rust", "Json", "Cli", "Parsing", "Lexical/Syntactic Analysis"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/r-jparser" },
+    { name = "docs", url = "https://github.com/bp7968h/r-jparser#readme" }
+]
+
+[[project]]
+name = "Rust Word Count (RWC)"
+desc = "Rust Word Count (RWC) is a Rust-based command-line application replicating the basic functionality of the UNIX wc command, with additional flexibility and modular design. It handles input from both files and standard input, and is designed to be part of a coding challenge to learn Rust. This project serves as an entry point into Rust development, with modular components to handle I/O, command-line argument parsing, and input processing."
+features = [
+    "Command-line Interface (CLI) for versatile usage",
+    "Handles both file input and standard input for flexibility",
+    "Modular design with isolated modules for I/O, configuration, and core functionality",
+    "Supports counting lines, words, characters, and bytes",
+    "Customizable command-line options for specific counts (e.g., lines, words, bytes)"
+]
+tags = ["Rust", "Cli", "Systems Programming", "I/O Handling"]
+links = [
+    { name = "github", url = "https://github.com/bp7968h/rwc" },
+    { name = "docs", url = "https://github.com/bp7968h/rwc#readme" }
+]
+
+[[project]]
+name = "WatchFlix - Netflix Clone"
+desc = "WatchFlix is a Netflix-inspired web application where users can browse, watch trailers, and receive AI-driven movie recommendations. Built using React and Material UI for a sleek and intuitive interface, it leverages Firebase for user authentication and database management. The OpenAI API provides personalized recommendations, while the TMDB API serves as the source for movie data. State management is handled by Redux, ensuring optimal performance. The project aims to deliver a seamless streaming experience similar to popular platforms."
+features = [
+    "User authentication with Firebase for secure login and registration",
+    "AI-powered personalized movie recommendations using the OpenAI API",
+    "Dynamic and responsive user interface designed with React and Material UI",
+    "Integrated TMDB API for fetching up-to-date movie and TV show information",
+    "State management with Redux for smooth data handling and performance",
+    "Search, filter, and explore functionalities with access to a vast movie catalog",
+    "Trailer viewing with embedded YouTube player"
+]
+tags = ["React", "Material UI", "Firebase", "OpenAI API", "Redux"]
+links = [
+    { name = "website", url = "https://watchflix.bhuwanpandit.me" },
+    { name = "github", url = "https://github.com/bp7968h/watchflix" },
+]
+
+[[project]]
+name = "READ-!T Online Book Store"
+desc = "READ-!T is a static online bookstore developed using HTML5, CSS3, and JavaScript. The website offers an interactive and user-friendly experience where users can browse, search, and purchase books. The project was built as part of an academic course on Human-Computer Interaction. The website focuses on simplicity, usability, and intuitive navigation while mimicking a dynamic bookstore experience without a backend. It includes features such as a responsive design, navigation shortcuts, alerts using SweetAlert, and Google Lighthouse-tested performance."
+features = [
+    "Fully functional static website using HTML, CSS, and JavaScript",
+    "Interactive alerts with SweetAlert for better user engagement",
+    "Responsive design tested for accessibility and performance using Google Lighthouse",
+    "User authentication flow with signup and login (simulated with static pages)",
+    "Cart functionality allowing users to add and remove items seamlessly",
+    "Optimized navigation with a consistent layout and shortcut buttons"
+]
+tags = ["HTML5", "CSS3", "JavaScript"]
+links = [
+    { name = "website", url = "https://readit-store.bhuwanpandit.me" },
+    { name = "github", url = "https://github.com/bp7968h/readit-store" }
+]
